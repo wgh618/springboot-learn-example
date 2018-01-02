@@ -49,7 +49,7 @@ public class HelloWorldTests {
 				.contentType(MediaType.APPLICATION_FORM_URLENCODED)
 				// 添加参数
 				.param("param","root")*/
-				// 接收数据类型200
+				// 接收数据类型
 				.accept(MediaType.APPLICATION_JSON))
 				// 返回的状态是200
 				.andExpect(MockMvcResultMatchers.status().isOk())
