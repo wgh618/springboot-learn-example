@@ -18,7 +18,7 @@ import org.springframework.web.context.WebApplicationContext;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 /**
- * ClassName:Application
+ * ClassName:com.will.springboot.Application
  * Description:HelloWordController测试类
  *
  * @Author Will Wu
