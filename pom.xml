@@ -16,6 +16,10 @@
         <module>springboot-properties</module>
         <!--  Spring Boot 之配置注解使用 -->
         <module>springboot-configuration</module>
+
+        <!-- 基础 – 数据存储篇 -->
+        <!-- Spring Boot 整合 Mybatis 的完整 Web 案例 -->
+        <module>springboot-mybatis</module>
     </modules>
 
     <!-- Spring Boot 启动父依赖 -->
@@ -30,6 +34,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <mybatis-spring-boot>1.3.2</mybatis-spring-boot>
+        <mysql-connector>8.0.12</mysql-connector>
+        <druid>1.1.10</druid>
+        <lombok>1.18.2</lombok>
     </properties>
 
     <dependencies>
@@ -58,6 +66,33 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- Spring Boot Mybatis 依赖 -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring-boot}</version>
+            </dependency>
+
+            <!-- MySQL 连接驱动依赖 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector}</version>
+            </dependency>
+
+            <!-- 数据库连接池依赖 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok}</version>
+                <scope>provided</scope>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
