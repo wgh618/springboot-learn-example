@@ -44,6 +44,3 @@ nbdist/
 *.zip
 *.tar.gz
 *.rar
-
-### MAVEN ###
-.mvn
